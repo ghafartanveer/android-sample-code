@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/layout_tab_indicator_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_location"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/ic_search"
+            android:iconifiedByDefault="false"
+            app:defaultQueryHint="@string/other_mind"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/layout_toolbar"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search for places, address" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/txt_ask"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/search_location"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/locate_me" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_ask"
+            style="@style/mediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ic_ask"
+            android:drawablePadding="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:text="@string/why_do_we_ask_for_your_address"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/txt_skip_for_now"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_skip_for_now"
+            style="@style/mediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:text="@string/skip_for_now"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            style="@style/guideLineStart" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            style="@style/guideLineTop" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            style="@style/guideLineBottom" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            style="@style/guideLineEnd" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

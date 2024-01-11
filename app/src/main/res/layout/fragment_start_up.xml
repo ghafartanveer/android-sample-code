@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/secondary_background">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson1"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_1"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_2"
+            app:layout_constraintBottom_toTopOf="@id/imgPerson5"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgPerson1"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson3"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginStart="@dimen/_16ssp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_3"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPerson1"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson4"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginEnd="-10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_4"
+            app:layout_constraintBottom_toTopOf="@id/imgPerson5"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPerson2"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson5"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_5"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineImageBottom"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson6"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_6"
+            app:layout_constraintBottom_toBottomOf="@id/imgPerson5"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/imgPerson5"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson7"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="-16dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_7"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineImageBottom"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPerson6"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson8"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="-16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_8"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineImageBottom"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPerson6"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPerson9"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_person_9"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineImageBottom"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+        <include
+            android:id="@+id/layout_footer"
+            layout="@layout/layout_home_screen_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="-16dp"
+            android:background="@drawable/ic_white_button"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/pink"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            style="@style/guideLineTop" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineImageBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.59"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineButtonStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            style="@style/guideLineEnd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

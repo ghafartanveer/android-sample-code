@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:id="@+id/bg_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/ic_solid_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPhone"
+            style="@style/semiBoldTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="@string/phone_number"
+            app:layout_constraintStart_toStartOf="@id/bg_view"
+            app:layout_constraintTop_toTopOf="@id/bg_view" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/img_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user_profile_white"
+            app:ccp_defaultNameCode="US"
+            app:ccp_showNameCode="false"
+            app:layout_constraintStart_toStartOf="@id/txtPhone"
+            app:layout_constraintTop_toBottomOf="@id/txtPhone"
+            app:tint="@color/app_black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPhone"
+            style="@style/editText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="@string/your_phone_number"
+            android:inputType="phone"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/img_country"
+            app:layout_constraintEnd_toEndOf="@id/bg_view"
+            app:layout_constraintStart_toEndOf="@id/img_country"
+            app:layout_constraintTop_toTopOf="@id/img_country" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

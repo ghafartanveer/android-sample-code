@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            style="@style/guideLineStart" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            style="@style/guideLineBottom" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            style="@style/guideLineEnd" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/txtOtherMind"
+            style="@style/semiBoldTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:drawableStart="@drawable/omlogosmall"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="@string/other_mind"
+            android:src="@drawable/ic_gradient_om_logo"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toTopOf="@id/txtFuture"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFuture"
+            style="@style/boldTextView"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="-10dp"
+            android:gravity="center|start"
+            android:letterSpacing="0.04"
+            android:text="@string/the_future_of"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_28ssp"
+            app:layout_constraintBottom_toTopOf="@id/txtSocial"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/verticalLine" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSocial"
+            style="@style/boldTextView"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="center|start"
+            android:letterSpacing="0.04"
+            android:text="@string/social_interaction"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_26ssp"
+            app:layout_constraintBottom_toTopOf="@id/btnStart"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/verticalLine" />
+
+        <View
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/ic_started_button"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+            app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart" />
+
+        <View
+            android:id="@+id/verticalLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:background="@drawable/ic_gradient_line"
+            app:layout_constraintBottom_toBottomOf="@id/txtSocial"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/txtFuture" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtStart"
+            style="@style/mediumTextView"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center|start"
+            android:text="@string/let_s_get_started"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/btnStart"
+            app:layout_constraintStart_toStartOf="@id/btnStart"
+            app:layout_constraintTop_toTopOf="@id/btnStart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:scaleType="center"
+            android:src="@drawable/ic_white_squared_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/btnStart"
+            app:layout_constraintEnd_toEndOf="@id/btnStart"
+            app:layout_constraintTop_toTopOf="@id/btnStart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

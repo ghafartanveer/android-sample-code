@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/layout_tab_indicator_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtYourNumber"
+            style="@style/regularTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:text="@string/is_this_your_number"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/layout_toolbar" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_number"
+            style="@style/semiBoldTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="+1 425 55 7589"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/txtYourNumber" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_edit"
+            style="@style/regularTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/edit"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_number"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@id/txtYourNumber" />
+
+
+        <View
+            android:id="@+id/viewOTP"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:background="@drawable/ic_otp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/txt_number" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_confirmation"
+            style="@style/semiBoldTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/confirmation_code"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="@id/viewOTP"
+            app:layout_constraintStart_toStartOf="@id/viewOTP"
+            app:layout_constraintTop_toTopOf="@id/viewOTP" />
+
+        <com.kevinschildhorn.otpview.OTPView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/viewOTP"
+            app:layout_constraintStart_toStartOf="@id/viewOTP"
+            app:layout_constraintTop_toBottomOf="@id/txt_confirmation"
+            app:otp_Font="@font/app_semibold"
+            app:otp_backgroundImage="@drawable/ic_otp_pin"
+            app:otp_filledBackgroundImage="@drawable/ic_otp_pin"
+            app:otp_ispassword="false"
+            app:otp_itemCount="6"
+            app:otp_itemHeight="40dp"
+            app:otp_itemWidth="42dp"
+            app:otp_showCursor="true" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            style="@style/guideLineStart" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            style="@style/guideLineTop" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            style="@style/guideLineEnd" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

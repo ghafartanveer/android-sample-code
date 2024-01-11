@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.android.othermind.models.countries.Countries" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImage"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_flag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/us" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_country_name"
+            style="@style/mediumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/cardImage"
+            app:layout_constraintStart_toEndOf="@id/cardImage"
+            app:layout_constraintTop_toTopOf="@id/cardImage" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/chk_language"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/checkbox_selector"
+            android:button="@null"
+            android:checked="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="@id/txt_country_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_country_name" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@color/app_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txt_country_name"
+            app:layout_constraintTop_toBottomOf="@id/cardImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

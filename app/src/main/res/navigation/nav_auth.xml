@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/startupFragment">
+
+    <fragment
+        android:id="@+id/startupFragment"
+        android:name="com.android.othermind.ui.fragments.auth.main.StartupFragment"
+        android:label="StartupFragment"
+        tools:layout="@layout/fragment_start_up">
+        <action
+            android:id="@+id/startToWelcome"
+            app:destination="@id/welcomeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/startupToLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.android.othermind.ui.fragments.auth.main.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/welcometoStepOne"
+            app:destination="@id/signupStepOne"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/welcomeToLogin"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/welcomeToReferFriend"
+            app:destination="@id/referFriendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupStepOne"
+        android:name="com.android.othermind.ui.fragments.auth.signup.SignupStepOne"
+        android:label="SignupStepOne"
+        tools:layout="@layout/fragment_signup_step_one">
+        <action
+            android:id="@+id/toSMSVerificationCode"
+            app:destination="@id/SMSVerificationCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/SMSVerificationCode"
+        android:name="com.android.othermind.ui.fragments.auth.signup.SendVerificationCodeFragment"
+        android:label="SMSVerificationCode"
+        tools:layout="@layout/fragment_send_sms_verification">
+        <action
+            android:id="@+id/verificationCodeToCodeConfirmation"
+            app:destination="@id/codeConfirmationFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/codeConfirmationFragment"
+        android:name="com.android.othermind.ui.fragments.auth.signup.CodeConfirmationFragment"
+        android:label="CodeConfirmationFragment"
+        tools:layout="@layout/fragment_confirmation_sms">
+        <action
+            android:id="@+id/codeConfirmationToAddress"
+            app:destination="@id/addressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.android.othermind.ui.fragments.auth.address.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address">
+        <action
+            android:id="@+id/addressToUsernameLanguage"
+            app:destination="@id/usernameLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usernameLanguageFragment"
+        android:name="com.android.othermind.ui.fragments.auth.usernamePassword.UsernameLanguageFragment"
+        android:label="UsernameLanguageFragment"
+        tools:layout="@layout/fragment_username_languague">
+        <action
+            android:id="@+id/usernameLanguageToSetPassword"
+            app:destination="@id/setPasswordFragment" />
+        <action
+            android:id="@+id/usernameToCountries"
+            app:destination="@id/countriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setPasswordFragment"
+        android:name="com.android.othermind.ui.fragments.auth.usernamePassword.SetPasswordFragment"
+        android:label="SetPasswordFragment"
+        tools:layout="@layout/fragment_password" />
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.android.othermind.ui.fragments.auth.usernamePassword.CountriesFragment"
+        android:label="CountriesFragment"
+        tools:layout="@layout/fragment_languages" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.android.othermind.ui.fragments.auth.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/loginToResetPassword"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.android.othermind.ui.fragments.auth.resetPassword.ResetPasswordFragment"
+        android:label="ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password">
+
+        <action
+            android:id="@+id/resetPasswordToPasswordConfirmation"
+            app:destination="@id/passwordConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setNewPasswordFragment"
+        android:name="com.android.othermind.ui.fragments.auth.resetPassword.SetNewPasswordFragment"
+        android:label="SetNewPasswordFragment"
+        tools:layout="@layout/fragment_password" />
+    <fragment
+        android:id="@+id/passwordConfirmationFragment"
+        android:name="com.android.othermind.ui.fragments.auth.resetPassword.PasswordConfirmationFragment"
+        android:label="PasswordConfirmationFragment"
+        tools:layout="@layout/fragment_email_confirmation">
+        <action
+            android:id="@+id/toSetNewPassword"
+            app:destination="@id/setNewPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/referFriendFragment"
+        android:name="com.android.othermind.ui.fragments.auth.refferal.ReferFriendFragment"
+        android:label="ReferFriendFragment"
+        tools:layout="@layout/fragment_refferal" >
+        <action
+            android:id="@+id/referFriendToThemeSelection"
+            app:destination="@id/themeSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/themeSelectionFragment"
+        android:name="com.android.othermind.ui.fragments.auth.ThemeSelectionFragment"
+        android:label="ThemeSelectionFragment"
+        tools:layout="@layout/fragment_theme_selection"/>
+</navigation>
